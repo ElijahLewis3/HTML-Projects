@@ -1,0 +1,1 @@
+Created an article based off my own research about the issues the world is having the the exponential increase of plastics and ways that it can be removed efficiently and sustainably.
