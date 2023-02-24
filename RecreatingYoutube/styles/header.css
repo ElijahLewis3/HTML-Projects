@@ -99,6 +99,7 @@
 .search-button{
     height: 40px;
     width: 64px;
+    background-color: rgba(165, 165, 165,.09);
     border-width: 1px;
     border-style: solid;
     border-color: rgb(165, 165, 165);
@@ -107,7 +108,13 @@
     border-bottom-right-radius: 2px;
 
     position: relative;
+    cursor: pointer;
+    transition: background-color 0.25s;
 
+}
+
+.search-button:hover{
+    background-color: rgba(165, 165, 165,.2);
 }
 
 .search-icon{
