@@ -23,3 +23,7 @@ a:hover{
 a:visited {
     color: black;
   }
+
+footer{
+    height: 200px;
+}

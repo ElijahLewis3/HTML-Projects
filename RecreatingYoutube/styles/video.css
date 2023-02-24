@@ -10,6 +10,7 @@
 .thumbnail{
     /*width: 300px;
     display: block;*/
+    position: relative;
     width:100%;
     cursor: pointer;
 }
@@ -18,7 +19,7 @@
     position: absolute;
     right:4px;
     bottom:7px;
-    z-index: 200;
+    z-index: 1;
     background-color: rgba(0,0,0,0.9);
     color: white;
     cursor:auto;
