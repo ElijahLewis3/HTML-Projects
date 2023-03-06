@@ -13,7 +13,6 @@ a:visited{
 
 body{
     background-color: lightgray;
-    height: 10000px;
 }
 
 /* HEADER */
@@ -74,8 +73,9 @@ body{
     font-family: Roboto, Arial;
     font-size: 100%;
     color: rgb(138, 209, 233);
+    color: black;
     font-weight: bold;
-    background-color: gray;
+    background-color: grey;
     border: 2px solid;
     border-radius: 5px;
     border-color: rgb(100, 100, 100);
@@ -91,6 +91,7 @@ body{
 
 .website-button:hover{
     background-color: rgb(138, 209, 233);
+    background-color: black;
     color: grey;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 
@@ -125,13 +126,21 @@ body{
 
 .right-side-button:hover{
     background-color: rgb(190,190,190);
+
 }
 
+.phone-image,
 .mail-image{
     width: 30px;
     height: 23px;
     margin-left: 10px;
     object-fit:cover;
+}
+
+.phone-image{
+    height: 100%;
+    object-fit: contain;
+    margin-right: 8px;
 }
 
 .contact-tooltip{
@@ -163,6 +172,7 @@ body{
     width: 100px;
     z-index: 100;
     border-top: 2px solid;
+    border-right: 2px solid;
     border-color: rgb(100, 100, 100);
 
     
@@ -178,9 +188,10 @@ body{
     font-family: Roboto, Arial;
     font-size: 100%;
     color: rgb(138, 209, 233);
+    color: black;
     background-color: gray;
     font-weight: bold;
-    height: 70px;
+    height: 100%;
     width: 100%;
     border: 2px solid;
     border-radius: 5px;
@@ -203,6 +214,7 @@ body{
 
 .sidebar-text-button:hover{
     background-color: rgb(138, 209, 233);
+    background-color: black;
     color: grey;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
@@ -216,6 +228,7 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     background-color: rgb(138, 209, 233);
+    background-color: rgb(100, 100, 100);
     row-gap: 70px;
 
     padding: 0px 40px 0px 40px;
@@ -223,31 +236,67 @@ body{
 
 }
 
-.middle-side-title{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex: 0 0 auto;
-    height: 100%;
-    margin: 0 20px 0 20px;
-}
-
 
 /* Page-ONE  and Page-TWO*/
-
-.two-title,
-.one-title{
-
+.one-title,
+.two-title {
+    position: relative;
     font-family: Roboto, Arial;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 100px;
     width: 100%;
+    margin-top: 10px;
     border: 3px solid;
-    border-radius: 3px;
+    border-color: white;
+    border-radius: 15px;
+}
 
+.one-title{
+    border-color: black;
+}
+
+.one-title-image,
+.two-title-image {
+    background-repeat:repeat-x;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+
+}
+
+.one-title-image{
+    background-image: url("images/frontend.png");
+}
+
+.two-title-image{
+    background-image: url("images/binary.jpeg");
+}
+
+.middle-side-title-one,
+.middle-side-title {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    flex-wrap: nowrap;
+
+    height: 100%;
+    margin: 0 20px 0 20px;
+
+    color: white;
+    font-size: 500%;
+
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.middle-side-title-one{
+    color: black;
+    /*-webkit-text-stroke-color: rgb(176, 176, 176);*/
 }
 
 .two-topics,
@@ -256,64 +305,366 @@ body{
     margin-bottom: 70px;
     height: 250px;
     width: 100%;
-    background-color: gray;
+    background-color: rgb(177, 177, 177);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 500;
+    padding:0 8px 0 8px;
+}
+
+.topics-images{
+    float: right;
+    position: relative;
+    shape-outside: circle(60% at 40px 86px);
+    
+}
+
+.bolded-highlight{
+    display: inline-block;
+    font-size: 28px;
+    color: black;
+    background-color: rgb(0, 98, 255);
+    border-radius: 6px;
+    margin-right: 2px;
+    padding: 0 4px 0 4px;
+    margin: 4px 0 0 2px;
 }
 
 
-/*
-@media screen and (min-width:80em){
-    .website-content{
-        margin: 1em 2em 1em 2em;
-    }
-}
-*/
+footer{
+    position: sticky;
+    bottom: -120px;
+    margin-left: 92px;
+    margin-right: -10px;
+    height: 150px;
+    background-color: rgb(245,245,245);
+    border: 2px solid;
+    border-color: rgb(100, 100, 100);
 
-@media screen and (max-width: 768px) {
-    /* Styles for screens smaller than 768px */
-    
-    .sidebar{
-        margin-top: 86px;
-    }
-    .header {
-    height: auto;
-    flex-direction: column;
-    }
-    
-    .left-side, .right-side, .middle-side {
+    display: grid;
+    row-gap: 7px;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.footer-info{
+    display: flex;
+    align-items: center;
+    height: 100%;
     width: 100%;
+
+    font-family: Roboto, Arial;
+    font-size: 100%;
+    font-weight: 600;
+}
+
+.footer-info .mail-image{
+    margin-right: 5px;
+}
+
+/* DUMMY 404 ERROR PAGE */
+
+
+
+.container {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-    }
-    
-    .left-side-text {
-    width: 100%;
+    align-items: center;
+    height: 100vh;
+}
+
+.error {
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+}
+
+.error h1 {
+    font-size: 10rem;
+    margin: 0;
+}
+
+.error h2 {
+    font-size: 3rem;
+    margin: 0 0 2rem;
+}
+
+.error p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #292929;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #292929;
+    color: #fff;
+}
+
+
+
+/* For Screens Smaller than 715px (Phones / Tablets)*/
+@media only screen and (min-width:0px) and (max-width:715px){
+    .header {
+      height: 50px;
+    }
+  
+    .left-side {
+      width: 10px;
+      margin-left: 35px;
+    }
+  
+    .left-side-text {
+      font-size: 12px;
+      width: 80px;
+    }
+  
+    .middle-side {
+      width: 20px;
+      padding-right: 4px;
     }
 
     .website-pages{
-        margin: 0 2% 0 2%;
+        width: 20px;
+        font-size: 10%;
     }
-/* 
-    .middle-side {
-    display: none;
+  
+    .website-button {
+      height: 40px;
+      width: 80px;
     }
-    
+  
+    .right-side {
+      width: 10px;
+      margin-right: 50px;
+    }
+  
+    .phone-image,
+    .mail-image {
+      width: 20px;
+      height: 15px;
+      margin-left: 5px;
+    }
+  
+    .contact-tooltip {
+      width: 120px;
+    }
+  
     .sidebar {
-    display: none;
+    margin-top: -20px;
+      width: 12%;
     }
-*/    
-    .one-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px;
+  
+    .sidebar-text-button {
+      font-size: 12%;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
+
+    .website-content{
+        margin: 10% 5% 0 5%;
+        width: 100%;
+    }
+
+    .one-title,
+    .two-title {
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .two-topics,
+    .one-topics{
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .topics-images{
+        width: 45%;
+    }
+
+    .footer{
+        width: 1000px;
+    }
+}
+
+/* For Screens Smaller than 900px but bigger than 716px (Tablets / iPads)*/
+@media only screen and (min-width:716px) and (max-width:900px){
+
+    .header {
+        height: 50px;
+      }
     
-    .one-topics {
-    margin-top: 80px;
-    }
+      .left-side {
+        width: 10px;
+        margin-left: 35px;
+      }
     
-    }
+      .left-side-text {
+        font-size: 12px;
+        width: 80px;
+      }
+    
+      .middle-side {
+        width: 20px;
+        padding-right: 4px;
+      }
+  
+      .website-pages{
+          width: 20px;
+          font-size: 16px;
+      }
+    
+      .website-button {
+        height: 40px;
+        width: 130px;
+      }
+    
+      .right-side {
+        width: 10px;
+        margin-right: 50px;
+      }
+    
+      .phone-image,
+      .mail-image {
+        width: 20px;
+        height: 15px;
+        margin-left: 5px;
+      }
+    
+      .contact-tooltip {
+        width: 120px;
+      }
+    
+      .sidebar {
+      margin-top: -20px;
+        width: 12%;
+      }
+    
+      .sidebar-text-button {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+  
+      .website-content{
+          margin: 10% 0 0 15%;
+          width: 100%;
+      }
+  
+      .one-title,
+      .two-title {
+          width: 100%;
+          font-size: 10px;
+          text-align: center;
+      }
+  
+      .two-topics,
+      .one-topics{
+          width: 100%;
+          font-size: 15px;
+      }
+  
+      .topics-images{
+          width: 30%;
+      }
+
+      .footer{
+        width: 100%;
+      }
+
+}
+/* For Screens Smaller than 1100px and bigger than 900px (Big iPads / Small Computers)*/
+@media only screen and (min-width:900px) and (max-width:1100px){
+
+    .header {
+        height: 50px;
+      }
+    
+      .left-side {
+        width: 10px;
+        margin-left: 35px;
+      }
+    
+      .left-side-text {
+        font-size: 12px;
+        width: 80px;
+      }
+    
+      .middle-side {
+        width: 20px;
+        padding-right: 4px;
+      }
+  
+      .website-pages{
+          width: 20px;
+          font-size: 14px;
+          text-align: center;
+      }
+    
+      .website-button {
+        height: 40px;
+        width: 150px;
+      }
+    
+      .right-side {
+        width: 10px;
+        margin-right: 50px;
+      }
+    
+      .phone-image,
+      .mail-image {
+        width: 20px;
+        height: 15px;
+        margin-left: 5px;
+      }
+    
+      .contact-tooltip {
+        width: 120px;
+      }
+    
+      .sidebar {
+      margin-top: -20px;
+        width: 12%;
+      }
+    
+      .sidebar-text-button {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+  
+      .website-content{
+          margin: 10% 0 0 15%;
+          width: 100%;
+      }
+  
+      .one-title,
+      .two-title {
+          width: 100%;
+          font-size: 10px;
+          text-align: center;
+      }
+  
+      .two-topics,
+      .one-topics{
+          width: 100%;
+          font-size: 18px;
+      }
+  
+      .topics-images{
+          width: 25%;
+      }
+
+      .footer-info{
+        margin-left: 30px;
+      }
+}
