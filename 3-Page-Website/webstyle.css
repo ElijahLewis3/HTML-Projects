@@ -2,6 +2,10 @@ a,
 a:visited{
     text-decoration: none;
 }
+.active{
+  background-color: red;
+  z-index: 100;
+}
 #section1,
 #section2,
 #section3,
@@ -13,32 +17,35 @@ a:visited{
 
 body{
     background-color: lightgray;
+
 }
+
 
 /* HEADER */
 
 .header{
     background-color: rgb(245,245,245);
-    height: 70px;
+    height: 10%;
     width: 100%;
     position: fixed;
     top:0;
     left: 0;
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
     align-items:center;
     border-bottom: 2px solid;
     border-color: rgb(100,100,100);
-    z-index: 100;
+    z-index: 200;
 }
 
 .left-side{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 250px;
+    max-width: 12%;
     height: 100%;
     position: relative;
+    margin-left: 20px;
 }
 
 .left-side-text{
@@ -60,15 +67,19 @@ body{
     justify-content: space-evenly;
     flex:1;
     height: 100%;
+    max-width: 100%;
     margin: 0 20px 0 20px;
 }
 
-.website-pages{
+.website-pages {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    max-width: 10px;
 }
 
+.website-button-active,
 .website-button{
     font-family: Roboto, Arial;
     font-size: 100%;
@@ -79,7 +90,7 @@ body{
     border: 2px solid;
     border-radius: 5px;
     border-color: rgb(100, 100, 100);
-    height: 50px;
+    height: 40px;
     width: 150px;
     opacity: 1;
     transition: 
@@ -87,6 +98,10 @@ body{
         background-color 0.5s,
         color 0.5s;
     cursor: pointer;
+}
+
+.website-button-active{
+  background-color:rgb(210, 210, 210);
 }
 
 .website-button:hover{
@@ -103,8 +118,9 @@ body{
     display: flex;
     align-items: center;
     justify-content:center;
-    width: 250px;
+    max-width: 12%;
     height: 100%;
+    margin-right: 40px;
 }
 
 .right-side-button{
@@ -167,9 +183,9 @@ body{
     background-color: rgb(245,245,245);
     position: fixed;
     left:0;
-    top:70px;
-    bottom: 0;
-    width: 100px;
+    bottom: 0%;
+    height: 100%; 
+    width: 8.4%;
     z-index: 100;
     border-top: 2px solid;
     border-right: 2px solid;
@@ -226,12 +242,13 @@ body{
 
 .website-content{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 20%;
     background-color: rgb(138, 209, 233);
     background-color: rgb(100, 100, 100);
     row-gap: 70px;
+    
 
-    padding: 0px 40px 0px 40px;
+    padding: 0px 40px 0px 25px;
     margin: 90px 10px 0px 110px;
 
 }
@@ -250,8 +267,8 @@ body{
     height: 100px;
     width: 100%;
     margin-top: 10px;
-    border: 3px solid;
-    border-color: white;
+    border: 3px solid white;
+
     border-radius: 15px;
 }
 
@@ -305,9 +322,11 @@ body{
     margin-bottom: 70px;
     height: 250px;
     width: 100%;
+    /* width: 86vw; */
     background-color: rgb(177, 177, 177);
     border-radius: 8px;
-    font-size: 16px;
+    /* font-size: 16px; */
+    font-size: 1.3vw;
     font-family: 'Times New Roman', Times, serif;
     color: black;
     font-weight: 500;
@@ -318,6 +337,8 @@ body{
     float: right;
     position: relative;
     shape-outside: circle(60% at 40px 86px);
+    height: 60%;
+    width: 20%;
     
 }
 
@@ -336,9 +357,9 @@ body{
 footer{
     position: sticky;
     bottom: -120px;
-    margin-left: 92px;
-    margin-right: -10px;
+    padding-left: 8.4%;
     height: 150px;
+    width: 100%;
     background-color: rgb(245,245,245);
     border: 2px solid;
     border-color: rgb(100, 100, 100);
@@ -411,7 +432,279 @@ footer{
 
 
 
+@media (width < 576px){
+
+  .header{
+    max-width: 100%;
+    flex-direction: column;
+    height: 15%;
+  }
+
+  .middle-side{
+    width: 68vw;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .left-side,
+  .right-side{
+    margin: 0;
+  }
+
+  .sidebar{
+    height: 85%;
+    width: 17vw;
+  }
+  .sidebar-text-button{
+    width: 17vw;
+    font-size: 3vw;
+  }
+
+  .website-pages .a,
+  .website-button-active,
+  .website-button{
+    width: 100%;
+    font-size: 80%;
+
+  }
+
+  .website-content{
+   /* margin: 10% 5% 0 15%; */
+    margin-top: 20vh;
+    margin-left: 15vw;
+    width: 100vw;
+    }
+
+    .one-title-image,
+    .two-title-image,
+    .one-title,
+    .two-title {
+        width: 100vw;
+        height: 20vh;
+        font-size: 10px;
+    }
+
+    .middle-side-title-one,
+    .middle-side-title {
+        -webkit-text-stroke-width: 2px;
+
+    }
+
+    .two-topics,
+    .one-topics{
+        margin-top: -10vw;
+        min-width: 100vw;
+        max-height: 22vh;
+        font-size: 8px;
+    }
+
+    .bolded-highlight{
+        font-size: 3vw;
+    }
+
+    .topics-images{
+        shape-outside: circle(60% at -5px 64px);
+    }
+
+  footer{
+    width: 100%;
+    padding-left: 18%;
+  }
+
+  main{
+    background-color: red;
+  }
+}
+
+@media (width > 576px) and (width < 776px){
+
+    .header{
+        max-width: 100%;
+        height: 15%;
+      }
+    
+      .middle-side{
+        width: 1fr;
+        margin: 0;
+    
+      }
+   
+      .left-side{
+        margin-left: 20px;
+      }
+      .right-side{
+        margin-right: 20px;
+      }
+    
+      .sidebar{
+        height: 85%;
+        width: 15vw;
+      }
+      .sidebar-text-button{
+        width: 15vw;
+        font-size: 2.7vw;
+      }
+    
+      .website-button-active,
+      .website-button{
+        width: 17vw;
+        height: 5vw;
+        font-size: 100%;
+        font-size: 2vw;
+    
+      }
+    
+      .website-content{
+       /* margin: 10% 5% 0 15%; */
+        margin-top: 20vh;
+        margin-left: 15vw;
+        width: 100vw;
+        }
+    
+        .one-title-image,
+        .two-title-image,
+        .one-title,
+        .two-title {
+            width: 100vw;
+            height: 20vh;
+            font-size: 12px;
+            font-size: 1.5vw;
+        }
+    
+        .middle-side-title-one,
+        .middle-side-title {
+            -webkit-text-stroke-width: 2px;
+    
+        }
+    
+        .two-topics,
+        .one-topics{
+            margin-top: -6vw;
+            min-width: 100vw;
+            max-height: 22vh;
+            font-size: 10px;
+        }
+    
+        .bolded-highlight{
+            font-size: 3vw;
+        }
+    
+        .topics-images{
+            shape-outside: circle(60% at -5px 64px);
+        }
+    
+      footer{
+        width: 100%;
+        padding-left: 18%;
+      }
+
+      main{
+        background-color: blue;
+      }
+
+}
+
+@media (width > 768px) and (width < 992px){
+
+    .header{
+        max-width: 100%;
+        height: 15%;
+      }
+    
+      .middle-side{
+        width: 1fr;
+        margin: 0;
+    
+      }
+   
+      .left-side{
+        margin-left: 20px;
+      }
+      .right-side{
+        margin-right: 20px;
+      }
+    
+      .sidebar{
+        height: 85%;
+        width: 13vw;
+      }
+      .sidebar-text-button{
+        width: 13vw;
+        font-size: 2vw;
+      }
+    
+      .website-button-active,
+      .website-button{
+        width: 17vw;
+        height: 5vw;
+        font-size: 100%;
+        font-size: 2vw;
+    
+      }
+    
+      .website-content{
+       /* margin: 10% 5% 0 15%; */
+        margin-top: 20vh;
+        margin-left: 15vw;
+        width: 100vw;
+        }
+    
+        .one-title-image,
+        .two-title-image,
+        .one-title,
+        .two-title {
+            width: 100vw;
+            height: 20vh;
+            font-size: 12px;
+            font-size: 1.5vw;
+        }
+    
+        .middle-side-title-one,
+        .middle-side-title {
+            -webkit-text-stroke-width: 2px;
+    
+        }
+    
+        .two-topics,
+        .one-topics{
+            margin-top: -6vw;
+            min-width: 100vw;
+            max-height: 22vh;
+            font-size: 12px;
+        }
+    
+        .bolded-highlight{
+            font-size: 3vw;
+        }
+    
+        .topics-images{
+            shape-outside: circle(60% at -5px 64px);
+        }
+    
+      footer{
+        width: 100%;
+        padding-left: 18%;
+      }
+
+  main{
+    background-color: gold;
+  }
+}
+
+@media (width > 992px){
+
+
+
+  main{
+    background-color: red;
+  }
+}
+
+
+
 /* For Screens Smaller than 715px (Phones / Tablets)*/
+/*
 @media only screen and (min-width:0px) and (max-width:715px){
     .header {
       height: 50px;
@@ -470,7 +763,7 @@ footer{
     }
 
     .website-content{
-        margin: 10% 5% 0 5%;
+        margin: 10% 5% 0 15%;
         width: 100%;
     }
 
@@ -479,6 +772,11 @@ footer{
         width: 100%;
         font-size: 10px;
         text-align: center;
+    }
+
+    .middle-side-title-one,
+    .middle-side-title {
+        -webkit-text-stroke-width: 2px;
     }
 
     .two-topics,
@@ -496,7 +794,7 @@ footer{
     }
 }
 
-/* For Screens Smaller than 900px but bigger than 716px (Tablets / iPads)*/
+/* For Screens Smaller than 900px but bigger than 716px (Tablets / iPads)
 @media only screen and (min-width:716px) and (max-width:900px){
 
     .header {
@@ -563,14 +861,19 @@ footer{
       .one-title,
       .two-title {
           width: 100%;
-          font-size: 10px;
+          font-size: 12px;
           text-align: center;
       }
+
+    .middle-side-title-one,
+    .middle-side-title {
+        -webkit-text-stroke-width: 2px;
+    }
   
       .two-topics,
       .one-topics{
           width: 100%;
-          font-size: 15px;
+          font-size: 14px;
       }
   
       .topics-images{
@@ -582,8 +885,8 @@ footer{
       }
 
 }
-/* For Screens Smaller than 1100px and bigger than 900px (Big iPads / Small Computers)*/
-@media only screen and (min-width:900px) and (max-width:1100px){
+/* For Screens Smaller than 1100px and bigger than 900px (Big iPads / Small Computers)
+@media only screen and (min-width:900px) and (max-width:1200px){
 
     .header {
         height: 50px;
@@ -650,14 +953,19 @@ footer{
       .one-title,
       .two-title {
           width: 100%;
-          font-size: 10px;
+          font-size: 14px;
           text-align: center;
+      }
+
+      .middle-side-title-one,
+      .middle-side-title {
+          -webkit-text-stroke-width: 2px;
       }
   
       .two-topics,
       .one-topics{
           width: 100%;
-          font-size: 18px;
+          font-size: 16px;
       }
   
       .topics-images{
@@ -668,3 +976,4 @@ footer{
         margin-left: 30px;
       }
 }
+*/
