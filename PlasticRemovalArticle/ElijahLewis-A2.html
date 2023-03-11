@@ -11,7 +11,7 @@
             }
             h1{
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-size: clamp(30vw,55vw,70vw);
+                font-size: 4vw;
                 color: rgb(70, 70, 70);
                 letter-spacing: 2px;
 
@@ -25,6 +25,7 @@
             p{
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 font-size: 16px;
+                color: #464646;
 
             }
 
@@ -45,6 +46,7 @@
             figcaption{
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 color: rgb(0, 0, 0);
+                color: #464646;
                 font-weight: bold;
 
             }
@@ -61,37 +63,100 @@
                 color:rgb(70, 70, 70);
             }
 
+            .text{
+                border: 2px solid #464646;
+                border-radius: 8px;
+                padding: 5px 10px 5px 10px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: 500;
+                color: #464646;
+                text-align: center;
+            }
+
+            .list{
+                margin: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                display: flex;
+                height: 110px;
+                width: 90%;
+                align-items: center;
+                justify-content: space-between;
+                border:3px dotted black ;
+                border-radius: 8px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 16px;
+            }
+
+            .list-el{
+                margin:0 10px 0 10px ;
+                padding: 8px 8px 8px 8px;
+                border: 2px solid black;
+                border-radius: 4px;
+            }
+
+            .list-3{
+                padding-left: 26px;
+            }
+              
+
 
         </style>
         
     </head>
 
     <body>
-        <h1 style="font-size: 4vw;" ><center> The World's Issue With Plastics</center></h1>
-
-        <p><b><font color="464646">This article will be discussing the 
-        ongoing issues the world is having with 
-        it's plastic consumption and the waste it's causing.</font> </b> </p>
+        <h1><center> The World's Issue With Plastics</center></h1>
         
         <figure>
-        <img src="PlasticLandfill.jpeg" alt = "logo "height="500" width="750" class= "center" >
+        <img src="PlasticLandfill.jpeg" alt = "logo "height="350px" width="800px" class= "center" >
         <figcaption><center>A picture of a man struggling to walk across a plastic landfill in Nairobi, Kenya. <br>Credit: Ben Curtis</center></figcaption>
         </figure>
 
-        <ul>
-            <li><a href="#section1"> The Effect Plastic Waste is Having on The Environment</a></li>
-            <li><a href="#section2"> What is Being Done to Stop It</a></li>
-            <li><a href="#section3"> Innovative Technologies to Help Eliminate Plastics</a></li>
-            <ul>
-                <li><a href="#section4"> Cat-HTR</a> </li>
-                <li><a href="#section5"> Plastic-Eating Bacteria</a> </li>
-            </ul>
-        </ul>
+        <div class="text">The use of plastic consumption is something that has been significantly increasing over the years. Day after day there is more and more 
+            plastics that are being used to provide different functions. Although plastic can be very useful and does help in many ways, its biodegradability
+            is something that limits its potential and can cause more harm then good. Researchers have been trying to find resources that can act as a substitute to plastic
+            while also providing a greater ecological benefit. This article will be discussing the ongoing issues the world is having with it's plastic consumption and the waste it's causing.
+        </div>
+
+        <nav class="list">
+            <div class="list-el" > 
+                <a href="#section1"> 
+                    &#9830; The Effect Plastic Waste is Having on The Environment
+                </a> 
+            </div>
+
+            <div class="list-el" > 
+                <a href="#section2"> 
+                    &#9830; What is Being Done to Stop It
+                </a> 
+            </div>
+
+            <div class="list-el" > 
+                <a href="#section3"> 
+                    &#9830; Innovative Technologies to Help Eliminate Plastics
+                </a> 
+
+                <div class="list-3">
+                    <a href="#section4">
+                        &#9674;Cat-HTR
+                    </a>
+                </div>
+
+                <div class="list-3">
+                    <a href="#section5">
+                        &#9674;Plastic-Eating Bacteria
+                    </a>
+                </div>
+            </div>
+
+            
+        </nav>
 
         <!-- Sub-headers -->
 
         <h2 id="section1" > <u>The Effect Plastic Waste is Having on The Environment</u> </h2>
-            <p> <font color="#464646">
+            <p>
                 Although plastics are already a common component of our daily lives, 
                 they also contribute a significant threat to the environment. 
                 The increased use of plastics has resulted in rising plastic trash, 
@@ -107,7 +172,7 @@
                 Plastics have the potential to release dangerous substances into the groundwater and soil, endangering both human health and animals.
                 According to <a href="https://www.unep.org/plastic-pollution" target="_blank">United Nations Environment Programme</a> From 1950-2017, approximately 76%
                 of the plastic produced ended up as plastic waste in either landfills or was dumped elsewhere.<br>
-                </font></p>
+                </p>
 
                 <figure>
                 <img src="PlasticDisposalGraph.jpeg" alt = "graph" height="300vw" width="500vw" class="center">
@@ -115,19 +180,19 @@
                 </figure>
                 <br>
 
-                <p> <font color="#464646">
+                <p> 
                     From the picture above we can see that the main strategy for discarding plastics is by just putting them in a landfill.
                     It takes up 86% of how plastic is to be disposed, this leads to large amounts of plastic buildup which can take thousands of years
                     to degrade. On the other side, 8% of plastic waste is disposed in the form of incineration. This may sound good as it is removing the 
                     general amount of plastic; however, this method produces greenhouse gasses and is not at all sustainable for the atmosphere. The only 
                     good and sustainable method of plastic disposal is recycling and even then, it only sits at 6%.
-                </font></p>
+                </p>
 
 
         
 
         <h2 id="section2" ><u> What is Being Done to Stop It </u> </h2>
-            <p> <font color="464646">
+            <p> 
                 Ever since the issue has been raised that the world's plastic consumption and production rate has been exponentially increasing, 
                 companies have took initiative to eliminate the use of single-use plastics. Items such as plastic straws or plastic utensils, and instead are opting
                 towards thing more eco-friendly such as biodegradable straws, or wooden utensils. 
@@ -157,12 +222,12 @@
                 There are companies that are coming out with new Technologies and solutions to help get rid of the enormous amount of plastic
                 that's being trashed every single day. There has been innovations such as the Cat-HTR and plastic-eating bacterias to help limit the rate at which plastic is being
                 inefficiently disposed.
-                </font> </p>
+                </p>
             
 
         <h2 id="section3" > <u> Innovative Technologies to Help Eliminate Plastics </u> </h2>
         <h3 id="section4" > <u> <font color="333333"> Cat-HTR</font></u> </h3>
-            <font color="464646"> <p>
+             <p>
                 With there being an influx of plastic waste that seems to be exponentially growing, there are companies that strive to come up
                 with innovative technologies to help reduce the amount of plastic the world consumes and produces. One company in particular has come up
                 with the invention to help turn plastic waste into high-quality sustainable oil. A Biotechnology company in North Sydney, Australia named "Licella",
@@ -176,13 +241,13 @@
                 <figcaption> <center>Image of the process of how the Cat-HTR changes the chemical state of plastics</center></figcaption>
             </figure>
 
-            <font color="464646"> <p>
+             <p>
                 For a deeper understanding of the step-by-step process Licella uses to transform plastic to a substitute for fossil fuels, you 
                 can access <a href="https://www.licella.com/technology/cat-htr/" target="_blank"> Licella's Website Here</a>
-            </font> </p>
+            </p>
 
             <h3 id="section5"><u> <font color="333333"> Plastic-Eating Bacteria</font></u> </h3>
-            <font color="464646"> <p>
+             <p>
                 In early 2016, scientists in Japan were shocked to have discovered what seemed to be a bacteria with the ability to decompose , or 
                 "consume" plastic. The team of scientists were able to identify the bacteria as "Ideonella sakaiensis". At the time, this discovery was ready to change how the world 
                 handled plastic waste. However, after further research, the scientists realized that the plastic-eating bacteria was only able to decompose a particular
