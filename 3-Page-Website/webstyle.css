@@ -17,8 +17,9 @@ a:visited{
 
 body{
     background-color: lightgray;
-
+    overflow-x: hidden;
 }
+
 
 
 /* HEADER */
@@ -324,22 +325,43 @@ body{
     width: 100%;
     /* width: 86vw; */
     background-color: rgb(177, 177, 177);
+    background-color: rgb(215, 215, 215);
     border-radius: 8px;
     /* font-size: 16px; */
-    font-size: 1.3vw;
+    font-size: 1vw;
     font-family: 'Times New Roman', Times, serif;
     color: black;
-    font-weight: 500;
+    font-weight: 600;
     padding:0 8px 0 8px;
 }
 
+.backend,
 .topics-images{
     float: right;
     position: relative;
     shape-outside: circle(60% at 40px 86px);
     height: 60%;
     width: 20%;
-    
+}
+
+.backend{
+  margin-top: 2%;
+  margin-right: 1%;
+  float: left;
+  shape-outside: circle(90% at 96px 50px);
+
+}
+
+.database{
+  float: right;
+  height: 45%;
+  width: 45%;
+}
+
+.image{
+  height: 100%;
+  width: 100%;
+
 }
 
 .bolded-highlight{
@@ -359,7 +381,7 @@ footer{
     bottom: -120px;
     padding-left: 8.4%;
     height: 150px;
-    width: 100%;
+    width: 91.6%;
     background-color: rgb(245,245,245);
     border: 2px solid;
     border-color: rgb(100, 100, 100);
@@ -508,7 +530,7 @@ footer{
     }
 
   footer{
-    width: 100%;
+    width: 118%;
     padding-left: 18%;
   }
 
@@ -595,7 +617,7 @@ footer{
         }
     
       footer{
-        width: 100%;
+        width: 108%;
         padding-left: 18%;
       }
 
@@ -671,7 +693,8 @@ footer{
             margin-top: -6vw;
             min-width: 100vw;
             max-height: 22vh;
-            font-size: 12px;
+            /* font-size: 12px; */
+            font-size: 2px;
         }
     
         .bolded-highlight{
@@ -683,7 +706,7 @@ footer{
         }
     
       footer{
-        width: 100%;
+        width: 108%;
         padding-left: 18%;
       }
 
