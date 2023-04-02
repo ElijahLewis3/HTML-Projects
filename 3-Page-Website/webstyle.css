@@ -3,9 +3,9 @@ a:visited{
     text-decoration: none;
 }
 .active{
-  background-color: red;
   z-index: 100;
 }
+
 #section1,
 #section2,
 #section3,
@@ -17,6 +17,8 @@ a:visited{
 
 body{
     background-color: lightgray;
+    background-color: rgb(0, 98, 255);
+    background-color: rgb(215, 215, 215);
     overflow-x: hidden;
 }
 
@@ -206,7 +208,6 @@ body{
     font-size: 100%;
     color: rgb(138, 209, 233);
     color: black;
-    background-color: gray;
     font-weight: bold;
     height: 100%;
     width: 100%;
@@ -244,14 +245,12 @@ body{
 .website-content{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 20%;
-    background-color: rgb(138, 209, 233);
     background-color: rgb(100, 100, 100);
+    background-color: rgb(0, 98, 255);
     row-gap: 70px;
     
-
     padding: 0px 40px 0px 25px;
-    margin: 90px 10px 0px 110px;
-
+    margin: 90px 0px 0px 130px;
 }
 
 
@@ -259,7 +258,7 @@ body{
 .one-title,
 .two-title {
     position: relative;
-    font-family: Roboto, Arial;
+    font-family: 'Roboto', Arial;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -277,6 +276,7 @@ body{
     border-color: black;
 }
 
+.home-title-image,
 .one-title-image,
 .two-title-image {
     background-repeat:repeat-x;
@@ -286,8 +286,16 @@ body{
 
 }
 
+.home-title-image{
+  height: 100%;
+  width: 100%;
+  background-image: url("images/titleWeb.jpeg");
+
+}
+
 .one-title-image{
     background-image: url("images/frontend.png");
+
 }
 
 .two-title-image{
@@ -314,25 +322,57 @@ body{
 
 .middle-side-title-one{
     color: black;
-    /*-webkit-text-stroke-color: rgb(176, 176, 176);*/
+    /* -webkit-text-stroke-color: rgb(176, 176, 176); */
+    /* -webkit-text-stroke-width: 2px; */
+
 }
 
+.one-topics-last,
 .two-topics,
-.one-topics{
-    margin-top: -100px;
-    margin-bottom: 70px;
-    height: 250px;
-    width: 100%;
-    /* width: 86vw; */
-    background-color: rgb(177, 177, 177);
-    background-color: rgb(215, 215, 215);
-    border-radius: 8px;
-    /* font-size: 16px; */
-    font-size: 1vw;
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-    font-weight: 600;
-    padding:0 8px 0 8px;
+.one-topics,
+.home-topics {
+  margin-top: -100px;
+  margin-bottom: 70px;
+  height: 258px;
+  width: 100%;
+  background-color: rgb(215, 215, 215);
+  border-radius: 8px;
+  font-size: 1vw;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  font-weight: 600;
+  padding:0 8px 0 8px;
+}
+
+.home-topics{
+  display: flex;
+  margin-top: -150px;
+}
+
+.one-topics-last{
+  display: flex;
+}
+
+.text {
+  float: left;
+  width: 60%;
+  margin-right: 50px;
+  flex: 1 1 1;
+}
+
+.video-container {
+  float: right;
+  width: 35%;
+  /* height: 90%; */
+  position: relative;
+  /* padding-left: 5%; */
+}
+
+.video {
+  margin-top: 2%;
+  margin-bottom: -1.2%;
+  width: 100%;
+  height: 90%;
 }
 
 .backend,
@@ -359,7 +399,7 @@ body{
 }
 
 .image{
-  height: 100%;
+  height: 90%;
   width: 100%;
 
 }
@@ -370,9 +410,8 @@ body{
     color: black;
     background-color: rgb(0, 98, 255);
     border-radius: 6px;
-    margin-right: 2px;
     padding: 0 4px 0 4px;
-    margin: 4px 0 0 2px;
+    margin: 10px 0 4px 2px;
 }
 
 
@@ -409,8 +448,6 @@ footer{
 
 /* DUMMY 404 ERROR PAGE */
 
-
-
 .container {
     display: flex;
     justify-content: center;
@@ -423,26 +460,37 @@ footer{
 }
 
 .error h1 {
-    font-size: 10rem;
+    font-size: 10.5vw;
     margin: 0;
 }
 
 .error h2 {
-    font-size: 3rem;
-    margin: 0 0 2rem;
+    font-size: 3.5vw;
+    margin: 0 0 2vw;
+}
+
+.error h4{
+  font-size: 1.8vw;
 }
 
 .error p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.5vw;
+    margin-bottom: 2.5vw;
+}
+
+.error span{
+  font-weight: bold;
+  background-color:rgb(255, 255, 255);
+  margin: 0 0.2em 0 0.2em;
+  padding: 0.3em;
 }
 
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 50px;
-    background-color: #fff;
-    color: #292929;
+    background-color: rgb(255, 255, 255);
+    color: rgb(41, 41, 41);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
@@ -455,7 +503,6 @@ footer{
 
 
 @media (width < 576px){
-
   .header{
     max-width: 100%;
     flex-direction: column;
@@ -492,12 +539,12 @@ footer{
   }
 
   .website-content{
-   /* margin: 10% 5% 0 15%; */
     margin-top: 20vh;
     margin-left: 15vw;
     width: 100vw;
     }
 
+    .home-title-image,
     .one-title-image,
     .two-title-image,
     .one-title,
@@ -513,6 +560,7 @@ footer{
 
     }
 
+    .home-topics,
     .two-topics,
     .one-topics{
         margin-top: -10vw;
@@ -533,10 +581,6 @@ footer{
     width: 118%;
     padding-left: 18%;
   }
-
-  main{
-    background-color: red;
-  }
 }
 
 @media (width > 576px) and (width < 776px){
@@ -549,7 +593,6 @@ footer{
       .middle-side{
         width: 1fr;
         margin: 0;
-    
       }
    
       .left-side{
@@ -578,12 +621,12 @@ footer{
       }
     
       .website-content{
-       /* margin: 10% 5% 0 15%; */
         margin-top: 20vh;
         margin-left: 15vw;
         width: 100vw;
         }
     
+        .home-title-image,
         .one-title-image,
         .two-title-image,
         .one-title,
@@ -600,12 +643,16 @@ footer{
     
         }
     
+        .home-topics,
         .two-topics,
         .one-topics{
             margin-top: -6vw;
-            min-width: 100vw;
-            max-height: 22vh;
-            font-size: 10px;
+            /* min-width: 100vw; */
+            /* max-height: 22vh; */
+            height: 100%;
+            width: 100%;
+            /* font-size: 10px; */
+            font-size: 88%;
         }
     
         .bolded-highlight{
@@ -620,11 +667,6 @@ footer{
         width: 108%;
         padding-left: 18%;
       }
-
-      main{
-        background-color: blue;
-      }
-
 }
 
 @media (width > 768px) and (width < 992px){
@@ -666,18 +708,18 @@ footer{
       }
     
       .website-content{
-       /* margin: 10% 5% 0 15%; */
         margin-top: 20vh;
-        margin-left: 15vw;
+        margin-left: 14vw;
         width: 100vw;
         }
     
+        .home-title-image,
         .one-title-image,
         .two-title-image,
         .one-title,
         .two-title {
             width: 100vw;
-            height: 20vh;
+            /* height: 20vh; */
             font-size: 12px;
             font-size: 1.5vw;
         }
@@ -687,14 +729,18 @@ footer{
             -webkit-text-stroke-width: 2px;
     
         }
-    
+        
+        .home-topics,
         .two-topics,
         .one-topics{
-            margin-top: -6vw;
-            min-width: 100vw;
-            max-height: 22vh;
-            /* font-size: 12px; */
-            font-size: 2px;
+            /* margin-top: -6vw; */
+            margin-top: -5em;
+            margin-right: -2vw;
+            /* min-width: 100vw; */
+            /* max-height: 22vh; */
+            height: 100%;
+            width: 100%;
+            font-size: 90%;
         }
     
         .bolded-highlight{
@@ -709,294 +755,4 @@ footer{
         width: 108%;
         padding-left: 18%;
       }
-
-  main{
-    background-color: gold;
-  }
 }
-
-@media (width > 992px){
-
-
-
-  main{
-    background-color: red;
-  }
-}
-
-
-
-/* For Screens Smaller than 715px (Phones / Tablets)*/
-/*
-@media only screen and (min-width:0px) and (max-width:715px){
-    .header {
-      height: 50px;
-    }
-  
-    .left-side {
-      width: 10px;
-      margin-left: 35px;
-    }
-  
-    .left-side-text {
-      font-size: 12px;
-      width: 80px;
-    }
-  
-    .middle-side {
-      width: 20px;
-      padding-right: 4px;
-    }
-
-    .website-pages{
-        width: 20px;
-        font-size: 10%;
-    }
-  
-    .website-button {
-      height: 40px;
-      width: 80px;
-    }
-  
-    .right-side {
-      width: 10px;
-      margin-right: 50px;
-    }
-  
-    .phone-image,
-    .mail-image {
-      width: 20px;
-      height: 15px;
-      margin-left: 5px;
-    }
-  
-    .contact-tooltip {
-      width: 120px;
-    }
-  
-    .sidebar {
-    margin-top: -20px;
-      width: 12%;
-    }
-  
-    .sidebar-text-button {
-      font-size: 12%;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
-    .website-content{
-        margin: 10% 5% 0 15%;
-        width: 100%;
-    }
-
-    .one-title,
-    .two-title {
-        width: 100%;
-        font-size: 10px;
-        text-align: center;
-    }
-
-    .middle-side-title-one,
-    .middle-side-title {
-        -webkit-text-stroke-width: 2px;
-    }
-
-    .two-topics,
-    .one-topics{
-        width: 100%;
-        font-size: 11px;
-    }
-
-    .topics-images{
-        width: 45%;
-    }
-
-    .footer{
-        width: 1000px;
-    }
-}
-
-/* For Screens Smaller than 900px but bigger than 716px (Tablets / iPads)
-@media only screen and (min-width:716px) and (max-width:900px){
-
-    .header {
-        height: 50px;
-      }
-    
-      .left-side {
-        width: 10px;
-        margin-left: 35px;
-      }
-    
-      .left-side-text {
-        font-size: 12px;
-        width: 80px;
-      }
-    
-      .middle-side {
-        width: 20px;
-        padding-right: 4px;
-      }
-  
-      .website-pages{
-          width: 20px;
-          font-size: 16px;
-      }
-    
-      .website-button {
-        height: 40px;
-        width: 130px;
-      }
-    
-      .right-side {
-        width: 10px;
-        margin-right: 50px;
-      }
-    
-      .phone-image,
-      .mail-image {
-        width: 20px;
-        height: 15px;
-        margin-left: 5px;
-      }
-    
-      .contact-tooltip {
-        width: 120px;
-      }
-    
-      .sidebar {
-      margin-top: -20px;
-        width: 12%;
-      }
-    
-      .sidebar-text-button {
-        font-size: 16px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-  
-      .website-content{
-          margin: 10% 0 0 15%;
-          width: 100%;
-      }
-  
-      .one-title,
-      .two-title {
-          width: 100%;
-          font-size: 12px;
-          text-align: center;
-      }
-
-    .middle-side-title-one,
-    .middle-side-title {
-        -webkit-text-stroke-width: 2px;
-    }
-  
-      .two-topics,
-      .one-topics{
-          width: 100%;
-          font-size: 14px;
-      }
-  
-      .topics-images{
-          width: 30%;
-      }
-
-      .footer{
-        width: 100%;
-      }
-
-}
-/* For Screens Smaller than 1100px and bigger than 900px (Big iPads / Small Computers)
-@media only screen and (min-width:900px) and (max-width:1200px){
-
-    .header {
-        height: 50px;
-      }
-    
-      .left-side {
-        width: 10px;
-        margin-left: 35px;
-      }
-    
-      .left-side-text {
-        font-size: 12px;
-        width: 80px;
-      }
-    
-      .middle-side {
-        width: 20px;
-        padding-right: 4px;
-      }
-  
-      .website-pages{
-          width: 20px;
-          font-size: 14px;
-          text-align: center;
-      }
-    
-      .website-button {
-        height: 40px;
-        width: 150px;
-      }
-    
-      .right-side {
-        width: 10px;
-        margin-right: 50px;
-      }
-    
-      .phone-image,
-      .mail-image {
-        width: 20px;
-        height: 15px;
-        margin-left: 5px;
-      }
-    
-      .contact-tooltip {
-        width: 120px;
-      }
-    
-      .sidebar {
-      margin-top: -20px;
-        width: 12%;
-      }
-    
-      .sidebar-text-button {
-        font-size: 18px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-      }
-  
-      .website-content{
-          margin: 10% 0 0 15%;
-          width: 100%;
-      }
-  
-      .one-title,
-      .two-title {
-          width: 100%;
-          font-size: 14px;
-          text-align: center;
-      }
-
-      .middle-side-title-one,
-      .middle-side-title {
-          -webkit-text-stroke-width: 2px;
-      }
-  
-      .two-topics,
-      .one-topics{
-          width: 100%;
-          font-size: 16px;
-      }
-  
-      .topics-images{
-          width: 25%;
-      }
-
-      .footer-info{
-        margin-left: 30px;
-      }
-}
-*/
