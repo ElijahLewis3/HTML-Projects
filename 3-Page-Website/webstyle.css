@@ -1,9 +1,6 @@
-a,
-a:visited{
-    text-decoration: none;
-}
-.active{
-  z-index: 100;
+nav a,
+a:visited {
+  text-decoration: none;
 }
 
 #section1,
@@ -12,13 +9,13 @@ a:visited{
 #section4,
 #section5 {
     scroll-margin-top: 90px;
-  }  
-
+}  
 
 body{
     background-color: lightgray;
     background-color: rgb(0, 98, 255);
     background-color: rgb(215, 215, 215);
+    background-color: rgb(245, 245, 245);
     overflow-x: hidden;
 }
 
@@ -28,6 +25,7 @@ body{
 
 .header{
     background-color: rgb(245,245,245);
+    background-color: white;
     height: 10%;
     width: 100%;
     position: fixed;
@@ -100,6 +98,7 @@ body{
         box-shadow 0.3s,
         background-color 0.5s,
         color 0.5s;
+        border-color: 0.5s;
     cursor: pointer;
 }
 
@@ -110,12 +109,13 @@ body{
 .website-button:hover{
     background-color: rgb(138, 209, 233);
     background-color: black;
+    background-color: rgb(0, 138, 255);
+
     color: grey;
+    color: white;
+    border-color: black;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-
-
 }
-
 
 .right-side{
     display: flex;
@@ -145,7 +145,6 @@ body{
 
 .right-side-button:hover{
     background-color: rgb(190,190,190);
-
 }
 
 .phone-image,
@@ -184,6 +183,7 @@ body{
 .sidebar{
 
     background-color: rgb(245,245,245);
+    background-color: white;
     position: fixed;
     left:0;
     bottom: 0%;
@@ -199,7 +199,6 @@ body{
     flex-direction: column;
     align-content: center;
     justify-content: space-evenly;
-
 
 }
 
@@ -227,13 +226,18 @@ body{
         box-shadow 0.3s,
         background-color 0.5s,
         color 0.5s;
+        border-color: 0.5s;
     cursor: pointer;
 }
 
 .sidebar-text-button:hover{
     background-color: rgb(138, 209, 233);
     background-color: black;
+    background-color: rgb(0, 138, 255);
+
     color: grey;
+    color: white;
+    border-color:black ;
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
 
@@ -322,9 +326,6 @@ body{
 
 .middle-side-title-one{
     color: black;
-    /* -webkit-text-stroke-color: rgb(176, 176, 176); */
-    /* -webkit-text-stroke-width: 2px; */
-
 }
 
 .one-topics-last,
@@ -363,9 +364,7 @@ body{
 .video-container {
   float: right;
   width: 35%;
-  /* height: 90%; */
   position: relative;
-  /* padding-left: 5%; */
 }
 
 .video {
@@ -647,11 +646,8 @@ footer{
         .two-topics,
         .one-topics{
             margin-top: -6vw;
-            /* min-width: 100vw; */
-            /* max-height: 22vh; */
             height: 100%;
             width: 100%;
-            /* font-size: 10px; */
             font-size: 88%;
         }
     
@@ -719,7 +715,6 @@ footer{
         .one-title,
         .two-title {
             width: 100vw;
-            /* height: 20vh; */
             font-size: 12px;
             font-size: 1.5vw;
         }
@@ -733,11 +728,8 @@ footer{
         .home-topics,
         .two-topics,
         .one-topics{
-            /* margin-top: -6vw; */
             margin-top: -5em;
             margin-right: -2vw;
-            /* min-width: 100vw; */
-            /* max-height: 22vh; */
             height: 100%;
             width: 100%;
             font-size: 90%;
